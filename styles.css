@@ -279,3 +279,47 @@ footer {
 .project:nth-child(4) {
   animation-delay: 1s;
 }
+
+/* Social Media Section */
+#social-media {
+  background-color: #111; /* dark black background for contrast */
+  padding: 2.5rem 1rem;
+  text-align: center;
+  color: white;
+  border-radius: 8px;
+  margin: 3rem auto;
+  max-width: 900px;
+}
+
+#social-media h2 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #a6d608; /* medium green for heading */
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+}
+
+.social-links a {
+  color: #a6d608; /* medium green */
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-links a:hover,
+.social-links a:focus {
+  color: #e0f576; /* lighter green on hover */
+  transform: scale(1.2);
+  outline: none;
+}
+
+/* Make icons bigger for better visibility */
+.social-links i {
+  font-size: 2.5rem;
+  line-height: 1;
+}
+

@@ -1,42 +1,174 @@
-/* Backgrounds */
+/* Import fonts (add this line in your HTML <head>): */
+/* <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@600&display=swap" rel="stylesheet"> */
+
+/* Base reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Open Sans', sans-serif;
+  background-color: #fefefe; /* almost pure white */
   color: #222;
+  line-height: 1.6;
+  font-size: 1rem;
 }
 
-h1, h2, h3 {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 600;
-  color: #2e7d32;
+/* Reusable styles */
+.section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem;
+  transition: background-color 0.4s ease;
 }
 
+/* Contrast for alternating sections */
 .section:nth-of-type(even) {
   background-color: #f9fbf9; /* very subtle greenish-white */
 }
 
-/* Hero */
+/* HERO Section */
 header.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
   background-color: #fff;
-  /* no border bottom or very subtle */
+  padding: 5rem 1rem;
   border-bottom: 1px solid #ddd;
+
+  /* Animation */
+  opacity: 0;
+  transform: translateY(-30px);
+  animation: fadeSlideDown 1s forwards;
+  animation-delay: 0.3s;
 }
 
-/* Hero buttons */
+.hero img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #4CAF50;
+  margin-bottom: 2rem;
+  transition: transform 0.3s ease;
+}
+
+.hero img:hover {
+  transform: scale(1.05);
+}
+
+.hero-content {
+  max-width: 600px;
+}
+
+.hero h1 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 2.7rem;
+  margin-bottom: 1rem;
+  color: #2e7d32; /* medium dark green */
+}
+
+.hero p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.25rem;
+  color: #555;
+  max-width: 600px;
+  margin-bottom: 2rem;
+}
+
+/* Buttons container */
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
 .btn {
   background-color: #388e3c; /* medium dark green */
   color: white;
+  padding: 0.9rem 1.6rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s ease, transform 0.2s ease;
+  display: inline-block;
 }
 
 .btn:hover {
   background-color: #2e7d32; /* darker green */
+  transform: translateY(-2px);
 }
 
-/* Project headings */
+/* Projects Section */
+#projects {
+  padding-top: 0;
+}
+
+#projects h2 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #2e7d32;
+}
+
+/* Project cards */
+.project {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+
+  /* Animation start: hidden and shifted left */
+  opacity: 0;
+  transform: translateX(-50px);
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+}
+
+/* Project hover */
+.project:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+}
+
 .project h3 {
-  color: #2e7d32; /* medium dark green */
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #2e7d32;
 }
 
-/* Contact section */
+.project p {
+  font-family: 'Open Sans', sans-serif;
+  margin-bottom: 1rem;
+  color: #444;
+}
+
+.project a {
+  color: #388e3c;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.project a:hover {
+  text-decoration: underline;
+}
+
+/* Contact Section */
 #contact {
   background-color: #e6f1e8; /* very pale green background */
   color: #2e7d32; /* dark green text */
@@ -46,28 +178,123 @@ header.hero {
   box-shadow: 0 4px 15px rgba(0,0,0,0.07);
 }
 
-#contact a.btn {
-  background-color: #4caf50; /* medium green */
-  color: white;
+#contact h2 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 2rem;
+  margin-bottom: 1rem;
 }
 
-#contact a.btn:hover {
+#contact p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+/* Contact links */
+#contact a {
+  color: #388e3c;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+/* Contact button */
+#contact .btn {
+  background-color: #4caf50; /* medium green */
+  color: white;
+  padding: 0.9rem 1.8rem;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  display: inline-block;
+}
+
+#contact .btn:hover {
   background-color: #388e3c;
+  color: white;
+  text-decoration: none;
 }
 
 /* Footer */
 footer {
+  text-align: center;
+  padding: 2rem 1rem;
   background-color: #2e7d32; /* dark green */
   color: #e6f1e8; /* pale green text */
+  font-weight: 500;
+  font-family: 'Poppins', sans-serif;
 }
 
-/* Links */
-a {
-  color: #388e3c;
-  text-decoration: none;
-  font-weight: 600;
+/* Animations Keyframes */
+@keyframes fadeSlideDown {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-a:hover {
-  text-decoration: underline;
+@keyframes slideFadeInLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Responsive Hero Layout */
+@media (min-width: 768px) {
+  header.hero {
+    flex-direction: row;
+    justify-content: center;
+    text-align: left;
+    gap: 3rem;
+  }
+
+  .hero img {
+    margin-bottom: 0;
+  }
+
+  .hero-content {
+    max-width: 600px;
+  }
+
+  .hero-buttons {
+    justify-content: flex-start;
+  }
+}
+
+/* Responsive Projects Animations */
+.project {
+  animation-name: slideFadeInLeft;
+  animation-duration: 0.6s;
+  animation-fill-mode: forwards;
+}
+
+.project:nth-child(1) {
+  animation-delay: 0.4s;
+}
+.project:nth-child(2) {
+  animation-delay: 0.6s;
+}
+.project:nth-child(3) {
+  animation-delay: 0.8s;
+}
+.project:nth-child(4) {
+  animation-delay: 1s;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  #projects h2, #contact h2 {
+    font-size: 1.6rem;
+  }
 }

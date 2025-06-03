@@ -34,11 +34,11 @@ p {
   padding: 4rem 1rem;
 }
 
-/* HERO SECTION WITH GREEN AND IMAGE */
+/* HERO SECTION (no gradient) */
 header.hero {
   text-align: center;
   padding: 6rem 1rem 4rem;
-  background: linear-gradient(to right, #e8f5e9, #f1f8e9); /* light green tones */
+  background-color: #ffffff; /* plain white */
   position: relative;
 }
 
@@ -46,4 +46,83 @@ header.hero {
   width: 150px;
   height: 150px;
   border-radius: 50%;
-  object-fit: cov
+  object-fit: cover;
+  border: 4px solid #4CAF50; /* green border */
+  margin-bottom: 1.5rem;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+/* Green Button */
+.btn {
+  display: inline-block;
+  background-color: #4CAF50;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #388E3C;
+}
+
+/* Projects */
+.project {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  transition: box-shadow 0.3s ease;
+}
+
+.project:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.project a {
+  color: #4CAF50;
+  text-decoration: none;
+}
+
+.project a:hover {
+  text-decoration: underline;
+}
+
+/* Contact */
+#contact a {
+  color: #4CAF50;
+}
+
+#contact a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  background-color: #4CAF50;
+  color: #fff;
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+  .hero h1 {
+    font-size: 3rem;
+  }
+
+  .hero p {
+    font-size: 1.5rem;
+  }
+}

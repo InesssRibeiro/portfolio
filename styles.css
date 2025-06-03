@@ -1,7 +1,4 @@
-/* Import fonts in HTML (make sure these are loaded)
-   Poppins (600) for headings, Open Sans (regular) for body text */
-
-/* Reset and base styles */
+/* Reset and base */
 * {
   margin: 0;
   padding: 0;
@@ -10,7 +7,7 @@
 
 body {
   font-family: 'Open Sans', sans-serif;
-  background-color: #f8f9fa; /* very light grey background */
+  background-color: #f8f9fa; /* very light grey */
   color: #222; /* dark grey text */
   line-height: 1.6;
   min-height: 100vh;
@@ -20,24 +17,23 @@ body {
   padding: 1rem;
 }
 
-/* Links */
 a {
-  color: #a6d608; /* medium green */
+  color: #4caf50; /* medium green */
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 a:hover,
 a:focus {
-  color: #e0f576; /* lighter green */
+  color: #81c784; /* lighter green */
   outline: none;
 }
 
 /* Buttons */
 .btn {
   display: inline-block;
-  background-color: #a6d608;
-  color: white;
+  background-color: #4caf50; /* medium green */
+  color: #fff;
   padding: 0.6rem 1.4rem;
   border-radius: 6px;
   font-weight: 600;
@@ -51,12 +47,12 @@ a:focus {
 
 .btn:hover,
 .btn:focus {
-  background-color: #8bb103; /* darker green */
+  background-color: #388e3c; /* darker green */
   transform: scale(1.05);
   outline: none;
 }
 
-/* Header / Hero Section */
+/* Hero Section */
 .hero {
   display: flex;
   align-items: center;
@@ -66,9 +62,9 @@ a:focus {
   width: 100%;
   margin: 3rem auto;
   padding: 2rem;
-  background-color: #d8e37d; /* soft light green background */
+  background-color: #e0e0e0; /* light grey background */
   border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(166, 214, 8, 0.3);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
   animation: fadeDown 1s ease forwards;
   opacity: 0;
 }
@@ -78,7 +74,7 @@ a:focus {
   height: 180px;
   border-radius: 50%;
   object-fit: cover;
-  box-shadow: 0 0 10px #a6d608;
+  box-shadow: 0 0 10px #4caf50;
   flex-shrink: 0;
   animation: fadeIn 1.5s ease forwards;
   opacity: 0;
@@ -93,7 +89,7 @@ a:focus {
   font-weight: 600;
   font-size: 2.8rem;
   margin-bottom: 0.5rem;
-  color: #2c3e21; /* dark greenish */
+  color: #222; /* dark text */
 }
 
 .hero-content p {
@@ -114,9 +110,10 @@ a:focus {
   width: 100%;
   margin: 3rem auto;
   padding: 1rem 2rem;
-  background-color: white;
+  background-color: #fff; /* white background */
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  color: #222;
 }
 
 /* About Section */
@@ -125,7 +122,7 @@ a:focus {
   font-weight: 600;
   font-size: 2rem;
   margin-bottom: 1rem;
-  color: #4a6829; /* dark olive green */
+  color: #2e7d32; /* strong green */
 }
 
 #about p {
@@ -133,13 +130,12 @@ a:focus {
   color: #444;
 }
 
-/* Projects Section with grey backgrounds */
+/* Projects Section */
 #projects {
-  background-color: #3a3a3a; /* medium dark grey */
+  background-color: #f0f0f0; /* very light grey */
   padding: 3rem 2rem;
   border-radius: 12px;
-  color: white;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
 }
 
 #projects h2 {
@@ -147,19 +143,19 @@ a:focus {
   font-weight: 600;
   font-size: 2rem;
   margin-bottom: 2rem;
-  color: #a6d608; /* medium green */
+  color: #4caf50; /* medium green */
 }
 
 .project {
-  background-color: #4f4f4f; /* lighter grey */
+  background-color: #dcdcdc; /* light grey */
   padding: 1.5rem 1.5rem;
   margin-bottom: 1.5rem;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   animation: slideIn 1s ease forwards;
   opacity: 0;
   transform: translateX(-50px);
-  color: white;
+  color: #222;
 }
 
 .project h3 {
@@ -172,28 +168,28 @@ a:focus {
 .project p {
   font-size: 1rem;
   margin-bottom: 1rem;
-  color: #ddd;
+  color: #333;
 }
 
 .project a {
   font-weight: 600;
-  color: #c9e972;
+  color: #4caf50;
 }
 
 .project a:hover {
-  color: #e0f576;
+  color: #388e3c;
 }
 
 /* Contact Section */
 #contact {
-  background-color: #d6e47f; /* lively light green */
+  background-color: #c8e6c9; /* light green */
   padding: 2rem 2rem;
   border-radius: 12px;
-  box-shadow: 0 6px 18px rgba(166, 214, 8, 0.3);
+  box-shadow: 0 6px 18px rgba(56, 142, 60, 0.3);
   text-align: center;
   max-width: 900px;
   margin: 3rem auto;
-  color: #23320f; /* dark green */
+  color: #1b5e20; /* dark green */
 }
 
 #contact h2 {
@@ -215,14 +211,14 @@ a:focus {
 
 /* Social Media Section */
 #social-media {
-  background-color: #2e2e2e; /* dark grey */
+  background-color: #424242; /* dark grey */
   padding: 2.5rem 1rem;
   text-align: center;
   color: white;
   border-radius: 12px;
   margin: 3rem auto;
   max-width: 900px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 }
 
 #social-media h2 {
@@ -230,7 +226,7 @@ a:focus {
   font-weight: 600;
   font-size: 2rem;
   margin-bottom: 1.5rem;
-  color: #a6d608; /* medium green */
+  color: #4caf50;
 }
 
 .social-links {
@@ -240,13 +236,13 @@ a:focus {
 }
 
 .social-links a {
-  color: #a6d608; /* medium green */
+  color: #81c784; /* lighter green */
   transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .social-links a:hover,
 .social-links a:focus {
-  color: #e0f576; /* lighter green */
+  color: #c8e6c9; /* very light green */
   transform: scale(1.2);
   outline: none;
 }
@@ -305,6 +301,8 @@ footer {
   animation-timing-function: ease;
   animation-fill-mode: forwards;
   animation-delay: 0.2s;
+  transform: translateY(0);
+  opacity: 0;
 }
 
 .project {
@@ -317,6 +315,7 @@ footer {
 .project:nth-child(odd) {
   animation-delay: 0.4s;
 }
+
 .project:nth-child(even) {
   animation-delay: 0.6s;
 }
@@ -347,7 +346,10 @@ footer {
     gap: 1rem;
   }
 
-  #projects, #social-media, #contact, .section {
+  #projects,
+  #social-media,
+  #contact,
+  .section {
     padding: 1.5rem 1rem;
     margin: 2rem auto;
   }

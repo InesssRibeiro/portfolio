@@ -62,7 +62,7 @@ a:focus {
   width: 100%;
   margin: 3rem auto;
   padding: 2rem;
-  background-color: #e0e0e0; /* light grey background */
+  background-color: black; /* light grey background */
   border-radius: 12px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
   animation: fadeDown 1s ease forwards;

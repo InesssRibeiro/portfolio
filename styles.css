@@ -1,7 +1,13 @@
 /* Backgrounds */
 body {
-  background-color: #fefefe; /* almost pure white */
+  font-family: 'Open Sans', sans-serif;
   color: #222;
+}
+
+h1, h2, h3 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  color: #2e7d32;
 }
 
 .section:nth-of-type(even) {

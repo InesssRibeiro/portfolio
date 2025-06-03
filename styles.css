@@ -20,6 +20,12 @@ body {
   max-width: 1100px;
   margin: 0 auto;
   padding: 4rem 1.5rem;
+  transition: background-color 0.4s ease;
+}
+
+/* Contrast for alternating sections */
+.section:nth-of-type(even) {
+  background-color: #e6f1e8; /* very light green */
 }
 
 /* HERO Section */
@@ -31,6 +37,12 @@ header.hero {
   background-color: #ffffff;
   padding: 5rem 1rem;
   border-bottom: 1px solid #e0e0e0;
+  
+  /* Animation */
+  opacity: 0;
+  transform: translateY(-30px);
+  animation: fadeSlideDown 1s forwards;
+  animation-delay: 0.3s;
 }
 
 .hero img {
@@ -60,6 +72,14 @@ header.hero {
   margin-bottom: 2rem;
 }
 
+/* Buttons container */
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
 .btn {
   background-color: #4CAF50;
   color: white;
@@ -70,24 +90,12 @@ header.hero {
   text-decoration: none;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   transition: background 0.3s ease, transform 0.2s ease;
+  display: inline-block;
 }
 
 .btn:hover {
   background-color: #388E3C;
   transform: translateY(-2px);
-}
-
-/* About */
-#about {
-  background-color: #f0fdf4;
-  border-radius: 16px;
-  padding: 3rem 2rem;
-}
-
-#about h2 {
-  font-size: 2rem;
-  color: #2e7d32;
-  margin-bottom: 1rem;
 }
 
 /* Projects */
@@ -97,6 +105,7 @@ header.hero {
   color: #2e7d32;
 }
 
+/* Project cards animations */
 .project {
   background-color: #fff;
   padding: 2rem;
@@ -104,8 +113,17 @@ header.hero {
   margin-bottom: 2rem;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
   transition: transform 0.2s ease, box-shadow 0.3s ease;
+  
+  /* Animation start: hidden and shifted left */
+  opacity: 0;
+  transform: translateX(-50px);
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
 }
 
+/* We will add a small delay via JS for each project for staggered animation */
+
+/* Project hover */
 .project:hover {
   transform: translateY(-5px);
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
@@ -131,37 +149,74 @@ header.hero {
   text-decoration: underline;
 }
 
-/* Contact */
+/* Contact Section */
 #contact {
-  background-color: #ffffff;
+  background-color: #4CAF50; /* strong green background */
+  color: white;
   border-radius: 16px;
   padding: 3rem 2rem;
   text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
 #contact h2 {
   font-size: 2rem;
-  color: #2e7d32;
   margin-bottom: 1rem;
 }
 
-#contact a {
-  color: #4CAF50;
-  text-decoration: none;
-  font-weight: 600;
+#contact p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
 }
 
-#contact a:hover {
+/* Contact links */
+#contact a {
+  color: white;
+  font-weight: 600;
   text-decoration: underline;
+}
+
+/* Contact button */
+#contact .btn {
+  background-color: white;
+  color: #4CAF50;
+  padding: 0.9rem 1.8rem;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  display: inline-block;
+}
+
+#contact .btn:hover {
+  background-color: #388E3C;
+  color: white;
+  text-decoration: none;
 }
 
 /* Footer */
 footer {
   text-align: center;
   padding: 2rem 1rem;
-  background-color: #4CAF50;
+  background-color: #388E3C;
   color: #fff;
   font-weight: 500;
+}
+
+/* Animations Keyframes */
+@keyframes fadeSlideDown {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideFadeInLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 /* Responsive Hero Layout */
@@ -179,5 +234,39 @@ footer {
 
   .hero-content {
     max-width: 600px;
+  }
+
+  .hero-buttons {
+    justify-content: flex-start;
+  }
+}
+
+/* Responsive buttons stack for small screens */
+@media (max-width: 460px) {
+  .hero-buttons {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+}
+
+/* Responsive projects */
+@media (min-width: 768px) {
+  #projects {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+
+@media (min-width: 1100px) {
+  #projects {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Responsive contact padding */
+@media (max-width: 500px) {
+  #contact {
+    padding: 2rem 1rem;
   }
 }

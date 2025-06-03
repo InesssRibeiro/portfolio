@@ -108,96 +108,78 @@ header.hero {
   color: #111; /* preto */
 }
 
-/* Project cards */
+/* Projetos com fundo preto */
 .project {
-  background-color: #fff;
+  background-color: #111; /* preto quase total */
+  color: #ddd; /* texto cinza claro para contraste */
   padding: 2rem;
   border-radius: 12px;
   margin-bottom: 2rem;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
-
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.7);
   opacity: 0;
   transform: translateX(-50px);
   animation-fill-mode: forwards;
   animation-timing-function: ease-out;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project:hover {
   transform: translateY(-5px);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.9);
 }
 
 .project h3 {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-  color: #111; /* preto */
+  color: #4caf50; /* verde médio para títulos */
 }
 
 .project p {
-  font-family: 'Open Sans', sans-serif;
-  margin-bottom: 1rem;
-  color: #444; /* cinza escuro */
+  color: #ccc; /* cinza claro para parágrafos */
 }
 
 .project a {
-  color: #4caf50; /* verde */
-  font-weight: 600;
-  text-decoration: none;
+  color: #81c784; /* verde mais claro para links */
 }
 
 .project a:hover {
+  color: #a5d6a7;
   text-decoration: underline;
 }
 
-/* Contact Section */
+/* Contact Section - fundo vibrante */
 #contact {
-  background-color: #111; /* preto total */
-  color: #fff; /* texto branco */
+  background: linear-gradient(135deg, #4caf50, #81c784); /* gradiente verde vivo */
+  color: #fff;
   border-radius: 16px;
   padding: 3rem 2rem;
   text-align: center;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 20px rgba(50, 168, 82, 0.6);
 }
 
 #contact h2 {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 600;
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  color: #4caf50; /* verde para destacar o título */
+  color: #e8f5e9; /* verde muito claro */
+  text-shadow: 0 1px 3px rgba(0,0,0,0.4);
 }
 
 #contact p {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 1.1rem;
-  margin-bottom: 2rem;
+  color: #d0f0c0;
 }
 
 #contact a {
-  color: #4caf50;
-  font-weight: 600;
+  color: #ffffff;
+  font-weight: 700;
   text-decoration: underline;
 }
 
-/* Contact button */
 #contact .btn {
-  background-color: #4caf50; /* verde */
-  color: white;
-  padding: 0.9rem 1.8rem;
-  border-radius: 30px;
-  font-size: 1.1rem;
-  font-weight: 700;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  transition: background-color 0.3s ease, color 0.3s ease;
-  display: inline-block;
+  background-color: #2e7d32; /* verde escuro forte */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
 }
 
 #contact .btn:hover {
-  background-color: #388e3c; /* verde mais escuro */
-  color: white;
-  text-decoration: none;
+  background-color: #1b5e20; /* verde ainda mais escuro */
+  color: #a5d6a7;
 }
+
 
 /* Footer */
 footer {

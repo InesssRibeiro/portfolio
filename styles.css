@@ -1,7 +1,6 @@
-/* Import fonts (add this line in your HTML <head>): */
-/* <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@600&display=swap" rel="stylesheet"> */
+/* Import fonts (no changes) */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@600&display=swap');
 
-/* Base reset */
 * {
   margin: 0;
   padding: 0;
@@ -14,36 +13,35 @@ html {
 
 body {
   font-family: 'Open Sans', sans-serif;
-  background-color: #fefefe; /* almost pure white */
-  color: #222;
+  background-color: #fff; /* branco puro */
+  color: #111; /* preto escuro para o texto principal */
   line-height: 1.6;
   font-size: 1rem;
 }
 
-/* Reusable styles */
+/* Sections */
 .section {
   max-width: 1100px;
   margin: 0 auto;
   padding: 4rem 1.5rem;
+  background-color: #fff;
   transition: background-color 0.4s ease;
 }
 
-/* Contrast for alternating sections */
+/* Alternando um pouco com preto bem suave para contraste */
 .section:nth-of-type(even) {
-  background-color: #f9fbf9; /* very subtle greenish-white */
+  background-color: #f4f4f4; /* cinza clarinho para contraste */
 }
 
-/* HERO Section */
+/* HERO */
 header.hero {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  background-color: #fff;
   padding: 5rem 1rem;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #222; /* linha preta para separação */
 
-  /* Animation */
   opacity: 0;
   transform: translateY(-30px);
   animation: fadeSlideDown 1s forwards;
@@ -55,7 +53,7 @@ header.hero {
   height: 160px;
   border-radius: 50%;
   object-fit: cover;
-  border: 4px solid #4CAF50;
+  border: 4px solid #4CAF50; /* verde médio */
   margin-bottom: 2rem;
   transition: transform 0.3s ease;
 }
@@ -64,63 +62,50 @@ header.hero {
   transform: scale(1.05);
 }
 
-.hero-content {
-  max-width: 600px;
-}
-
 .hero h1 {
   font-family: 'Poppins', sans-serif;
   font-weight: 600;
   font-size: 2.7rem;
   margin-bottom: 1rem;
-  color: #2e7d32; /* medium dark green */
+  color: #111; /* preto forte */
 }
 
 .hero p {
   font-family: 'Open Sans', sans-serif;
   font-size: 1.25rem;
-  color: #555;
+  color: #333; /* cinza escuro para melhor leitura */
   max-width: 600px;
   margin-bottom: 2rem;
 }
 
-/* Buttons container */
-.hero-buttons {
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
+/* Buttons */
 .btn {
-  background-color: #388e3c; /* medium dark green */
+  background-color: #4caf50; /* verde médio */
   color: white;
   padding: 0.9rem 1.6rem;
   border-radius: 8px;
   font-size: 1rem;
   font-weight: 600;
   text-decoration: none;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
   transition: background 0.3s ease, transform 0.2s ease;
   display: inline-block;
+  border: none;
+  cursor: pointer;
 }
 
 .btn:hover {
-  background-color: #2e7d32; /* darker green */
+  background-color: #388e3c; /* verde mais escuro */
   transform: translateY(-2px);
 }
 
 /* Projects Section */
-#projects {
-  padding-top: 0;
-}
-
 #projects h2 {
   font-family: 'Poppins', sans-serif;
   font-weight: 600;
   font-size: 2rem;
   margin-bottom: 2rem;
-  color: #2e7d32;
+  color: #111; /* preto */
 }
 
 /* Project cards */
@@ -130,36 +115,33 @@ header.hero {
   border-radius: 12px;
   margin-bottom: 2rem;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
-  transition: transform 0.2s ease, box-shadow 0.3s ease;
 
-  /* Animation start: hidden and shifted left */
   opacity: 0;
   transform: translateX(-50px);
   animation-fill-mode: forwards;
   animation-timing-function: ease-out;
 }
 
-/* Project hover */
 .project:hover {
   transform: translateY(-5px);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
 }
 
 .project h3 {
   font-family: 'Poppins', sans-serif;
   font-weight: 600;
   margin-bottom: 0.5rem;
-  color: #2e7d32;
+  color: #111; /* preto */
 }
 
 .project p {
   font-family: 'Open Sans', sans-serif;
   margin-bottom: 1rem;
-  color: #444;
+  color: #444; /* cinza escuro */
 }
 
 .project a {
-  color: #388e3c;
+  color: #4caf50; /* verde */
   font-weight: 600;
   text-decoration: none;
 }
@@ -170,12 +152,12 @@ header.hero {
 
 /* Contact Section */
 #contact {
-  background-color: #e6f1e8; /* very pale green background */
-  color: #2e7d32; /* dark green text */
+  background-color: #111; /* preto total */
+  color: #fff; /* texto branco */
   border-radius: 16px;
   padding: 3rem 2rem;
   text-align: center;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.07);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
 #contact h2 {
@@ -183,6 +165,7 @@ header.hero {
   font-weight: 600;
   font-size: 2rem;
   margin-bottom: 1rem;
+  color: #4caf50; /* verde para destacar o título */
 }
 
 #contact p {
@@ -191,28 +174,27 @@ header.hero {
   margin-bottom: 2rem;
 }
 
-/* Contact links */
 #contact a {
-  color: #388e3c;
+  color: #4caf50;
   font-weight: 600;
   text-decoration: underline;
 }
 
 /* Contact button */
 #contact .btn {
-  background-color: #4caf50; /* medium green */
+  background-color: #4caf50; /* verde */
   color: white;
   padding: 0.9rem 1.8rem;
   border-radius: 30px;
   font-size: 1.1rem;
   font-weight: 700;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   transition: background-color 0.3s ease, color 0.3s ease;
   display: inline-block;
 }
 
 #contact .btn:hover {
-  background-color: #388e3c;
+  background-color: #388e3c; /* verde mais escuro */
   color: white;
   text-decoration: none;
 }
@@ -221,13 +203,13 @@ header.hero {
 footer {
   text-align: center;
   padding: 2rem 1rem;
-  background-color: #2e7d32; /* dark green */
-  color: #e6f1e8; /* pale green text */
-  font-weight: 500;
+  background-color: #111; /* preto */
+  color: #4caf50; /* verde para contraste */
+  font-weight: 600;
   font-family: 'Poppins', sans-serif;
 }
 
-/* Animations Keyframes */
+/* Animations */
 @keyframes fadeSlideDown {
   to {
     opacity: 1;
@@ -242,7 +224,7 @@ footer {
   }
 }
 
-/* Responsive Hero Layout */
+/* Responsive */
 @media (min-width: 768px) {
   header.hero {
     flex-direction: row;
@@ -264,7 +246,21 @@ footer {
   }
 }
 
-/* Responsive Projects Animations */
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  #projects h2, #contact h2 {
+    font-size: 1.6rem;
+  }
+}
+
+/* Animations delay for projects */
 .project {
   animation-name: slideFadeInLeft;
   animation-duration: 0.6s;
@@ -282,19 +278,4 @@ footer {
 }
 .project:nth-child(4) {
   animation-delay: 1s;
-}
-
-/* Responsive adjustments for smaller screens */
-@media (max-width: 480px) {
-  .hero h1 {
-    font-size: 2rem;
-  }
-
-  .hero p {
-    font-size: 1rem;
-  }
-
-  #projects h2, #contact h2 {
-    font-size: 1.6rem;
-  }
 }

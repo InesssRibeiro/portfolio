@@ -7,14 +7,18 @@
   <link rel="stylesheet" href="./styles.css" />
 </head>
 <body>
- <header class="hero">
+<header class="hero">
   <img src="ines.jpg" alt="Foto de Inês Lemos Ribeiro" />
   <div class="hero-content">
     <h1>Olá, eu sou Inês 👋</h1>
     <p>Front-End Developer com foco em UX, performance e acessibilidade.</p>
-    <a href="#projects" class="btn">Ver Projetos</a>
+    <div class="hero-buttons">
+      <a href="#projects" class="btn">Ver Projetos</a>
+      <a href="cv.pdf" download class="btn">Download CV</a>
+    </div>
   </div>
 </header>
+
 
 
   <section id="about" class="section">
@@ -40,5 +44,14 @@
   <footer>
     <p>&copy; 2025 Inês Lemos Ribeiro</p>
   </footer>
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const projects = document.querySelectorAll('.project');
+    projects.forEach((project, i) => {
+      project.style.animation = `slideFadeInLeft 0.7s forwards`;
+      project.style.animationDelay = `${i * 0.3 + 0.5}s`; // stagger delay
+    });
+  });
+</script>
 </body>
 </html>

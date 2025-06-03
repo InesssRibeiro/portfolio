@@ -5,13 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Inês Lemos Ribeiro | Front-End Developer</title>
 
-  <!-- Google Fonts -->
+  <!-- Google Fonts Poppins + Open Sans -->
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@600&display=swap" rel="stylesheet" />
 
-  <!-- CSS -->
+  <!-- Your CSS -->
   <link rel="stylesheet" href="./styles.css" />
-
-  <!-- Font Awesome -->
+  <!-- Optional: Font Awesome for icons -->
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -21,8 +20,8 @@
   />
 </head>
 <body>
-  <header class="hero">
-    <div class="container hero-inner">
+  <main class="container">
+    <header class="hero card">
       <img src="your-photo.jpg" alt="Photo of Inês Lemos Ribeiro" />
       <div class="hero-content">
         <h1>Hello, I’m Inês 👋</h1>
@@ -32,21 +31,17 @@
           <a href="/path-to-your-cv.pdf" class="btn" download>Download CV</a>
         </div>
       </div>
-    </div>
-  </header>
+    </header>
 
-  <section id="about" class="section">
-    <div class="container">
+    <section id="about" class="section card">
       <h2>About Me</h2>
       <p>
         I hold a degree in New Communication Technologies from the University of Aveiro. I have been working as a front-end developer since 2018, specialising in HTML, CSS, JavaScript and UX best practices. I also have experience with WordPress, but I am currently focused on modern front-end development.
       </p>
       <p>I am based in Portugal.</p>
-    </div>
-  </section>
+    </section>
 
-  <section id="projects" class="section">
-    <div class="container">
+    <section id="projects" class="section card">
       <h2>Projects</h2>
       <div class="project">
         <h3>Project Name 1</h3>
@@ -58,11 +53,9 @@
         <p>Brief project description. Technologies used, challenges solved, etc.</p>
         <a href="#">View code</a> | <a href="#">Demo</a>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="contact" class="section">
-    <div class="container">
+    <section id="contact" class="section card contact-card">
       <h2>Contact</h2>
       <p>
         You can email me at
@@ -70,11 +63,9 @@
         <a href="https://www.linkedin.com/in/inessribeiro/" target="_blank" rel="noopener noreferrer">LinkedIn</a>.
       </p>
       <a href="mailto:inessribeiro.dev@gmail.com" class="btn">Send Email</a>
-    </div>
-  </section>
+    </section>
 
-  <section id="social-media" class="section">
-    <div class="container">
+    <section id="social-media" class="section card">
       <h2>Social Media</h2>
       <div class="social-links">
         <a href="https://twitter.com/yourhandle" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
@@ -90,13 +81,11 @@
           <i class="fab fa-facebook fa-2x"></i>
         </a>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <footer>
-    <div class="container">
+    <footer class="footer">
       <p>&copy; 2025 Inês Lemos Ribeiro</p>
-    </div>
-  </footer>
+    </footer>
+  </main>
 </body>
 </html>

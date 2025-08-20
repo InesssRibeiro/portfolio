@@ -1,91 +1,298 @@
 <!DOCTYPE html>
 <html lang="en-GB">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Inês Lemos Ribeiro | Front-End Developer</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Inês Lemos Ribeiro | Front-End Developer</title>
+    <meta
+      name="description"
+      content="Inês Lemos Ribeiro – Front-End Developer passionate about creating responsive, accessible, and performance-optimized web interfaces. Experienced in HTML, CSS, JavaScript, and eager to grow into full-stack development."
+    />
 
-  <!-- Google Fonts Poppins + Open Sans -->
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@600&display=swap" rel="stylesheet" />
+    <meta
+      name="keywords"
+      content="Inês Lemos Ribeiro, Front-End Developer, HTML, CSS, JavaScript, React, Next.js, web development, responsive design, accessible web, SEO, full-stack developer, portfolio"
+    />
 
-  <!-- Your CSS -->
-  <link rel="stylesheet" href="./styles.css" />
-  <!-- Optional: Font Awesome for icons -->
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    integrity="sha512-papbOjURBqE5Ph4lZscEYqv1YpYYH+Pz79oxJUV9EpV4WbI+0UQRcULRC8VVr/5bKw9LmYqevIlm+1eM9av4Kg=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-  />
-</head>
-<body>
-  <main class="container">
-    <header class="hero card">
-      <img src="your-photo.jpg" alt="Photo of Inês Lemos Ribeiro" />
-      <div class="hero-content">
-        <h1>Hello, I’m Inês 👋</h1>
-        <p>Front-End Developer focusing on UX, performance and accessibility.</p>
-        <div class="hero-buttons">
-          <a href="#projects" class="btn">View Projects</a>
-          <a href="/path-to-your-cv.pdf" class="btn" download>Download CV</a>
-        </div>
+    <meta name="author" content="Inês Lemos Ribeiro" />
+
+    <!-- Google Fonts: Poppins and Open Sans -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./styles.css" />
+
+    <link rel="icon" href="imgs/favicon.png" type="image/png" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="title">
+        <a href="#home"
+          ><span id="logo-txt"
+            >INÊS RIBEIRO(<span class="logo-green">i</span>)<span
+              class="logo-green"
+              >;</span
+            ></span
+          >
+        </a>
       </div>
+      <nav class="menu">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact" id="nav-btn">Contact Me</a>
+      </nav>
     </header>
+    <div class="grid">
+      <section id="home">
+        <div class="home-text-btns">
+          <h1>Hi, I'm <span>INÊS.</span></h1>
+          <hr />
+          <h2>
+            Hello there! Nice seeing you here. <br />
+            I craft modern, user-friendly front-end experiences. Check out my
+            work—I’d love to hear from you.
+          </h2>
+          <div id="home-btns">
+            <a
+              href="#projects"
+              id="home-projects-btn"
+              aria-label="Go to Projects"
+              >Projects</a
+            >
+            <a href="#contact" id="home-contact-btn" aria-label="Contact Inês"
+              >Contact Me</a
+            >
+          </div>
+        </div>
+        <div class="mypic">
+          <img
+            src="imgs/ines_front_end_developer.png"
+            alt="Inês wearing a professional clothing and smiling"
+          />
+        </div>
+      </section>
 
-    <section id="about" class="section card">
-      <h2>About Me</h2>
-      <p>
-        I hold a degree in New Communication Technologies from the University of Aveiro. I have been working as a front-end developer since 2018, specialising in HTML, CSS, JavaScript and UX best practices. I also have experience with WordPress, but I am currently focused on modern front-end development.
-      </p>
-      <p>I am based in Portugal.</p>
-    </section>
+      <section id="about">
+        <span class="title">
+          <h2>About</h2>
+          <hr
+        /></span>
 
-    <section id="projects" class="section card">
-      <h2>Projects</h2>
-      <div class="project">
-        <h3>Project Name 1</h3>
-        <p>Brief project description. Technologies used, challenges solved, etc.</p>
-        <a href="#">View code</a> | <a href="#">Demo</a>
-      </div>
-      <div class="project">
-        <h3>Project Name 2</h3>
-        <p>Brief project description. Technologies used, challenges solved, etc.</p>
-        <a href="#">View code</a> | <a href="#">Demo</a>
-      </div>
-    </section>
+        <p class="main-text">
+          <strong>Front-end developer</strong> experienced in
+          creating <strong>responsive</strong> and
+          <strong>performance-optimized</strong> interfaces using
+          <strong>HTML</strong>, <strong>CSS</strong>,
+          <strong>JavaScript</strong>, and <strong>React</strong>.
+          <strong>Creative</strong> and <strong>focused</strong>, with a strong
+          foundation in <strong>user experience</strong>, <strong>SEO</strong>,
+          and <strong>Conversion optimization</strong>. Experienced in
+          collaborating with UX designers and development teams to bring
+          projects to life efficiently and effectively. Also worked with PHP and
+          MySQL in college projects. Currently upskilling in frameworks such as
+          <strong>React</strong> and <strong>Next.js</strong>, aiming to deliver
+          modern solutions that help you get the best experience.
+        </p>
+        <div id="icons">
+          <span id="about-tech-1">
+            <span>
+              <img
+                src="./imgs/HTML5_software_developer.webp"
+                id="about-html-icon"
+                alt="html logo"
+              />
+              <p>HTML</p>
+            </span>
+            <span>
+              <img
+                src="./imgs/css_front-end_developer.webp"
+                id="about-css-icon"
+                alt="css logo"
+              />
+              <p>CSS</p>
+            </span>
+            <span>
+              <img
+                src="./imgs/JavaScript_Developer.webp"
+                id="about-js-icon"
+                alt="Javascript logo"
+              />
+              <p style="margin-left: 10px">JavaScript</p>
+            </span>
+            <span>
+              <img src="./imgs/React_Developer.webp" alt="react_logo" />
+              <p>React</p>
+            </span>
+          </span>
+          <span id="about-tech-2">
+            <p>Also worked with:</p>
+            <img
+              src="./imgs/php_logo.webp"
+              id="about-php-icon"
+              alt="php logo"
+            />
+            <img
+              src="./imgs/database-mysql-logo.webp"
+              id="about-mysql-icon"
+              alt="mysql logo"
+            />
+          </span>
+        </div>
+      </section>
 
-    <section id="contact" class="section card contact-card">
-      <h2>Contact</h2>
-      <p>
-        You can email me at
-        <a href="mailto:inessribeiro.dev@gmail.com">inessribeiro.dev@gmail.com</a> or get in touch via
-        <a href="https://www.linkedin.com/in/inessribeiro/" target="_blank" rel="noopener noreferrer">LinkedIn</a>.
-      </p>
-      <a href="mailto:inessribeiro.dev@gmail.com" class="btn" id="btn-contact">Send Email</a>
-    </section>
-
-    <section id="social-media" class="section card">
-      <h2>Social Media</h2>
-      <div class="social-links">
-        <a href="https://twitter.com/yourhandle" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
-          <i class="fab fa-twitter fa-2x"></i>
-        </a>
-        <a href="https://github.com/inesssRibeiro" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-          <i class="fab fa-github fa-2x"></i>
-        </a>
-        <a href="https://www.instagram.com/yourhandle" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-          <i class="fab fa-instagram fa-2x"></i>
-        </a>
-        <a href="https://www.facebook.com/yourhandle" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-          <i class="fab fa-facebook fa-2x"></i>
-        </a>
-      </div>
-    </section>
-
-    <footer class="footer">
-      <p>&copy; 2025 Inês Lemos Ribeiro</p>
-    </footer>
-  </main>
-</body>
+      <section id="projects">
+        <span class="title">
+          <h2>Projects</h2>
+          <hr
+        /></span>
+        <div id="project-1">
+          <img
+            src="./imgs/wikifeed_app_software_developer_talent.webp"
+            alt="Wikifeed app thumbnail"
+            class="img-proj"
+          />
+          <h3>WIKIFEED APP</h3>
+          <hr />
+          <p>
+            This mobile app enables users to scan and log their food intake
+            throughout the day, retrieving detailed nutritional information via
+            a third-party API. It also features a social component where users
+            can share recipes, comment, receive notifications, and interact
+            through a feed. I developed most of the front-end and back-end
+            components myself, handling both the UI and server-side logic.
+          </p>
+        </div>
+        <div hidden>
+          <img
+            src="./imgs/LOSTUA_portal_front_end_dev.webp"
+            alt="Lost UA platform thumbnail"
+            class="img-proj"
+          />
+          <h3>LOST UA</h3>
+          <hr />
+          <p>
+            This platform was designed specifically for college students to log
+            items they have found on campus and search for items they have lost.
+            It facilitates easy reporting and searching, helping the campus
+            community reunite lost belongings with their owners quickly and
+            efficiently.
+          </p>
+        </div>
+        <div id="project-2">
+          <img
+            src="./imgs/websites_done_bymyself.webp"
+            alt="Websites thumbnail"
+            class="img-proj"
+          />
+          <h3>WEBSITES</h3>
+          <hr />
+          <p>
+            I also did a lot of websites with attention to good design, UX, SEO
+            best practices and performance.
+          </p>
+        </div>
+        <div id="project-3">
+          <img
+            src="./imgs/game_javascript_developer.webp"
+            alt="Heart Race Game thumbnail"
+            class="img-proj"
+          />
+          <h3>HEART RACE GAME</h3>
+          <hr />
+          <p>This game was fully thought and developed by myself.</p>
+        </div>
+      </section>
+      <section id="contact">
+        <span class="title">
+          <h2>Let's Talk?</h2>
+          <hr
+        /></span>
+        <form class="my-form">
+          <div class="left-fields">
+            <label for="name">Name</label><br />
+            <input
+              type="text"
+              id="name"
+              placeholder="e.g.: John Doe"
+              name="name"
+            />
+            <br />
+            <label for="email">Email Address</label><br />
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="e.g.: example@example.com"
+            />
+          </div>
+          <div class="right-fields">
+            <label for="email">Email</label><br />
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Enter your message here"
+              rows="5"
+              cols="40"
+            ></textarea
+            ><br />
+            <button type="submit">Send to Inês</button>
+          </div>
+        </form>
+      </section>
+      <footer>
+        <div class="footer-links">
+          <a
+            href="https://www.linkedin.com/in/in%C3%AAs-ribeiro-9831bb117/"
+            target="_blank"
+            aria-label="LinkedIn"
+          >
+            <i class="fab fa-linkedin"></i>
+          </a>
+          &nbsp;&nbsp;&nbsp;
+          <a
+            href="https://github.com/InesssRibeiro"
+            target="_blank"
+            aria-label="GitHub"
+          >
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+        <br />
+        <p>or click to call/send e-mail:</p>
+        <br />
+        <div class="footer-contact">
+          <span><i class="fas fa-phone"></i> <a href="tel:+351924720773">+351 924 720 773</a></snap>&nbsp;&nbsp;&nbsp;
+          <span><i class="fas fa-envelope"></i> <a href="mailto:ineslemosribeiro96@gmail.com">ineslemosribeiro96@gmail.com</a></snap>
+        </div>
+      </footer>
+    </div>
+    <dialog>
+      <button id="closeBtn">X</button>
+      <div id="dialog-title">TEST</div>
+      <iframe
+        width="560"
+        height="315"
+        src=""
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+      ></iframe>
+    </dialog>
+    <script src="./script.js"></script>
+  </body>
 </html>

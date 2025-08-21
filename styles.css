@@ -335,6 +335,15 @@ nav a {
   grid-area: p4;
 }
 
+.img-proj {
+  transition: transform 0.3s ease;
+}
+
+.img-proj:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
 dialog {
   position: fixed;
   top: 50%;

@@ -227,7 +227,6 @@ nav a {
 #home-contact-btn {
   background-color: var(--main-color);
   color: white;
-  box-shadow: 0 0 10px var(--glow-green);
 }
 
 .mypic img {
